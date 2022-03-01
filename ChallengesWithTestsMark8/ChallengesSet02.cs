@@ -9,6 +9,7 @@ namespace ChallengesWithTestsMark8
     {
         public bool CharacterIsALetter(char c)
         {
+            //using system.Linq
             return char.IsLetter(c);
         }
 
@@ -47,6 +48,7 @@ namespace ChallengesWithTestsMark8
                 return false;
             }
         }
+        
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
@@ -75,46 +77,42 @@ namespace ChallengesWithTestsMark8
             {
                 return 0;
             }
+            return numbers.Sum();
 
             //int sum = 0;
-            //foreach(var num in numbers)
-            //{
-            //    sum += num;
+            //foreach(int number in numbers)
+            //{ 
+            //    sum += number;
             //}
-
-            //for (int i = 0; i < numbers.Length; i++)
+            //for (int i =0; i < numbers.Length; i++)
             //{
-            //    sum += numbers[i];
+            //    sum = sum += numbers[i];
             //}
-
-            return numbers.Sum();
         }
 
         public int SumEvens(int[] numbers)
         {
-            if (numbers == null)
+           if (numbers == null)
             {
                 return 0;
             }
-
             var evenSum = 0;
+            for (int i =0; i < numbers.Length; i++)
 
-            for(int i = 0; i < numbers.Length; i++)
-
-                if(numbers[i] % 2 == 0)
-                {
-                    evenSum += numbers[i];
-                }
+            if(numbers[i] % 2 ==0)
+            {
+                evenSum += numbers[i];
+            }
             return evenSum;
-            //Linq
-            //return numbers.Where(number => number % 2 == 0).Sum();
+
+            //return numbers.Where(numbers => numbers % 2 == 0).Sum();
 
 
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-           if (numbers == null)
+           if ( numbers == null)
             {
                 return false;
             }
@@ -125,7 +123,7 @@ namespace ChallengesWithTestsMark8
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            if ( number <= 0 )
+            if ( number <= 0)
             {
                 return 0;
             }

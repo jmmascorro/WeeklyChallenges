@@ -28,13 +28,13 @@ namespace ChallengesWithTestsMark8
 
         public int GetSmallestNumber(int number1, int number2)
         {
-            if (number1 < number2)
+           if(number1 < number2)
             {
                 return number1;
             }
             else
-            { 
-                return number2; 
+            {
+                return number2;
             }
         }
 
@@ -45,24 +45,22 @@ namespace ChallengesWithTestsMark8
 
         public string GetGreeting(string nameOfPerson)
         {
-            
             if (nameOfPerson == "")
             {
-                return "Hello!"; 
+                return "Hello!";
             }
             else
-            { 
-                return $"Hello, {nameOfPerson}!"; 
+            {
+                return $"Hello, {nameOfPerson}!";
             }
+            
             
         }
 
         public string GetHey()
         {
-            string getHey = "HEY!";
-
-            return getHey;
-          
+            return "HEY!";
+         
         }
     }
 }
